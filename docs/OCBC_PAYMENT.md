@@ -2,7 +2,7 @@
 
 ## Status
 
-Integrasi ini menggantikan Midtrans dengan QRIS MPM dari PT Mitra Transaksi Indonesia (MTI/Yokke). Implementasi aplikasi belum diaktifkan; dokumen ini menjadi konfigurasi awal dan acuan deployment.
+Integrasi ini menggantikan Midtrans dengan QRIS MPM dari PT Mitra Transaksi Indonesia (MTI/Yokke). Implementasi kode sudah tersedia di branch `main`; production belum diaktifkan sampai credential UAT dan aturan signature callback dikonfirmasi.
 
 Pemeriksaan hosting pada 9 September 2026:
 
