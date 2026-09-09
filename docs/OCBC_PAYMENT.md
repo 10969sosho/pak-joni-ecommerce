@@ -15,10 +15,10 @@ Pemeriksaan hosting pada 9 September 2026:
 
 ## URL Merchant
 
-URL production yang diberikan ke OCBC/MTI:
+URL production yang diberikan ke OCBC/MTI sesuai technical document:
 
 ```text
-https://jomotocenter.com/payment/ocbc/notify
+https://jomotocenter.com/v1.0/qr/qr-mpm-notify
 ```
 
 Endpoint tersebut akan menerima `POST` notifikasi pembayaran dari MTI dan harus mengembalikan:
@@ -33,7 +33,7 @@ Endpoint tersebut akan menerima `POST` notifikasi pembayaran dari MTI dan harus 
 Untuk staging, gunakan domain HTTPS publik yang aktif, misalnya:
 
 ```text
-https://staging.jomotocenter.com/payment/ocbc/notify
+https://staging.jomotocenter.com/v1.0/qr/qr-mpm-notify
 ```
 
 Jangan gunakan `localhost` karena tidak dapat diakses MTI.
@@ -92,7 +92,7 @@ OCBC_TERMINAL_ID=
 OCBC_PARTNER_ID=
 OCBC_CHANNEL_ID=02
 OCBC_PRIVATE_KEY_PATH=/absolute/path/to/ocbc-client-private.pem
-OCBC_NOTIFY_URL=https://jomotocenter.com/payment/ocbc/notify
+OCBC_NOTIFY_URL=https://jomotocenter.com/v1.0/qr/qr-mpm-notify
 ```
 
 `OCBC_CLIENT_KEY` adalah identifier merchant, sedangkan private key digunakan untuk signature RSA. `OCBC_CLIENT_SECRET` digunakan untuk signature transaksi jika memang dikonfirmasi oleh OCBC/MTI.
